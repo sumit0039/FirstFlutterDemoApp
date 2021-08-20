@@ -2,6 +2,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:gadfix_vendor/Demo.dart';
 import 'package:gadfix_vendor/Login.dart';
 
 class IntroPAge extends StatefulWidget {
@@ -63,9 +65,11 @@ class _IntroPAgeState extends State<IntroPAge> {
                         backgroundColor: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)
-                        )
+                        ),minimumSize: Size(200, 40)
                       ),
                     ),
+                    // splashColor: Colors.red,
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:gadfix_vendor/Demo.dart';
 import 'package:gadfix_vendor/Intro.dart';
 
 class SplashScreen extends StatefulWidget {
