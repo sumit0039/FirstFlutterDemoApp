@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gadfix_vendor/Registration.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -48,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                   topLeft: Radius.circular(30.0)
                 )
               ),
-              child: Column(
+              child: ListView(
                 children: [
                   Row(
                     children: [
@@ -131,18 +132,19 @@ class _LoginPageState extends State<LoginPage> {
                   ),
 
                   Padding(
-                    padding: EdgeInsets.only(left: 10, right: 10, top: 30),
-
+                    padding: EdgeInsets.only(left: 50,right: 50,top: 50,bottom: 20),
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        gradient: LinearGradient(
-                          colors: [Colors.yellow,Colors.orange],
-                        )
+                          borderRadius: BorderRadius.circular(10.0),
+                          gradient: LinearGradient(
+                            colors: [Colors.yellow,Colors.orange],
+                          )
                       ),
                       child: FlatButton(
-                        onPressed: (){},
-                        child: Text('Login'),
+                        onPressed: (){
+                          navigateToNextScreen(context);
+                        },
+                        child: Text('Login'.toUpperCase(),style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                         // color: Colors.yellow,
                         // splashColor: Colors.yellowAccent,
 
@@ -150,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
 
-                  )
+                  ),
                 ],
               )
 
@@ -160,5 +162,8 @@ class _LoginPageState extends State<LoginPage> {
       ),
       )
     );
+  }
+  void navigateToNextScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegistrationPage()));
   }
 }

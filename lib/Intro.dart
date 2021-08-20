@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:gadfix_vendor/Demo.dart';
 import 'package:gadfix_vendor/Login.dart';
+import 'package:gadfix_vendor/Registration.dart';
 
 class IntroPAge extends StatefulWidget {
   const IntroPAge({Key key}) : super(key: key);
@@ -57,7 +58,7 @@ class _IntroPAgeState extends State<IntroPAge> {
                     //   child: Icon(Icons.arrow_back, color: Colors.blue),
                     // ),
                     TextButton(onPressed: (){
-                      print("Click");
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegistrationPage()));
 
                     },
                       child: Text('Register', style: TextStyle(color: Colors.white),),
@@ -76,7 +77,7 @@ class _IntroPAgeState extends State<IntroPAge> {
                         new Text('I already have an account?', style: TextStyle(color: Colors.white),),
                         TextButton(onPressed: (){
                           navigateToNextScreen(context);
-                        }, child: Text('SignUp',style: TextStyle(color: Colors.white),))
+                        }, child: Text('SignUp',style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,fontSize: 15),))
                       ],
                     ),
 
