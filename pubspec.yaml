@@ -29,6 +29,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   pin_entry_text_field: ^0.1.3
+  carousel_slider: ^3.0.0
+  carousel_pro: ^0.0.13
+  flutter_gradient_colors: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +52,17 @@ flutter:
   assets:
      - assests/images/logo_gadfix.png
      - assests/images/regbg.png
+     - assests/images/image_icon.png
+     - assests/images/ic_home.png
+     - assests/images/ic_payment.png
+     - assests/images/ic_upload.png
+     - assests/images/ic_ticket.png
+     - assests/images/ic_profile.png
+     - assests/images/ic_notification_bell.png
+     - assests/images/mobilefix_image.png
+     - assests/images/mobilefix_image1.png
+     - assests/images/mobilefix_image2.jpg
+     - assests/images/mobilefix_image3.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

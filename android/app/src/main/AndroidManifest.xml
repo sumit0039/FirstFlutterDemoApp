@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.genies.gadfix_vendor">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="gadfix_vendor"
         android:icon="@mipmap/ic_launcher">

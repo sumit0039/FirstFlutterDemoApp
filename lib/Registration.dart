@@ -52,6 +52,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               ),
 
               child: ListView(
+                physics: BouncingScrollPhysics(),
                 children: [
                   Padding(
                     padding: EdgeInsets.only(left: 30,right: 30,top: 30),

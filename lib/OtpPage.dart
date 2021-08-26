@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:gadfix_vendor/UserDetailsPage.dart';
 import 'package:pin_entry_text_field/pin_entry_text_field.dart';
 class OtpPage extends StatefulWidget {
   const OtpPage({Key key}) : super(key: key);
@@ -62,8 +63,19 @@ class _OtpPageState extends State<OtpPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 200, top: 30),
-                  child: Text("Resend OTP",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),)
+                  padding: EdgeInsets.only(top: 30),
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topRight,
+                          child: Container(
+                              padding: EdgeInsets.only(right: 20),
+                              child: Text("Resend OTP",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),)
+                          ),
+                      )
+                    ],
+                  ),
+                  //
                 ),
 
                 Padding(
@@ -77,14 +89,15 @@ class _OtpPageState extends State<OtpPage> {
                     ),
                     child: FlatButton(
                       onPressed: (){
-                        showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                  title: Text('Pin'),
-                                  content: Text('Pin entered is $pin_value'));
-                            }
-                        );
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => UserDetailsPage()));
+                        // showDialog(
+                        //     context: context,
+                        //     builder: (context) {
+                        //       return AlertDialog(
+                        //           title: Text('Pin'),
+                        //           content: Text('Pin entered is $pin_value'));
+                        //     }
+                        // );
                       },
                       child: Text('Submit',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                       // color: Colors.yellow,
